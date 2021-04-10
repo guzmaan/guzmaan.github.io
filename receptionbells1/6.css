@@ -1,0 +1,16 @@
+body {
+    color: white;
+    background-color: white;
+    font-family: monospace;
+    font-size: 20px;
+    height: central;
+    width: central;
+    margin: central;
+}
+
+button {
+    height: 100px;
+    width: 100px;
+    margin: 25px;
+    background-color: white;
+}
