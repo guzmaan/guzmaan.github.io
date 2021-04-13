@@ -36,7 +36,7 @@ function loadSample() {
     request.send();
 }
 
-const player = new Tone.Player("https://tonejs.github.io/audio/berklee/gong_1.mp3").toDestination();
+const player = new Tone.Player('a_1.wav').toDestination();
 // play as soon as the buffer is loaded
 player.autostart = true;
 
