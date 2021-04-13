@@ -21,6 +21,9 @@ function loadSample() {
 
     let request = new XMLHttpRequest();
     request.open("get", 'a_1.wav', true);
+    request.open("get", 'a_2.wav', true);
+    request.open("get", 'a_3.wav', true);
+
     request.responseType = "arraybuffer";
 
     request.onload = function () {
@@ -33,19 +36,11 @@ function loadSample() {
     request.send();
 }
 
-function playSample() {
+const player = new Tone.Player("https://tonejs.github.io/audio/berklee/gong_1.mp3").toDestination();
+// play as soon as the buffer is loaded
+player.autostart = true;
 
-    init();
 
-    if (!audioBuffer) {
-        alert('there is no audio buffer!');
-    }
-
-    let sound = audioContext.createBufferSource();
-    sound.buffer = audioBuffer;
-    sound.connect(audioContext.destination);
-    sound.start(audioContext.currentTime);
-}
 
 
 document.addEventListener('keydown', function (event) {
@@ -53,6 +48,6 @@ document.addEventListener('keydown', function (event) {
     loadSample();
   }
   if (event.key === 'l') {
-    playSample();
+    player;
   }
 });
