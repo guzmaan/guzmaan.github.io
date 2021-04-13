@@ -1,4 +1,3 @@
-console.log('hello')
 
 let loaded = false;
 let audioContext = null;
@@ -44,7 +43,6 @@ function playSample() {
 
     let sound = audioContext.createBufferSource();
     sound.buffer = audioBuffer;
-    sound.playbackRate.value = 10 * Math.random();
     sound.connect(audioContext.destination);
     sound.start(audioContext.currentTime);
 }
