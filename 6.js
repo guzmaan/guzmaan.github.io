@@ -1,3 +1,5 @@
+console.log('hello')
+
 let loaded = false;
 let audioContext = null;
 
