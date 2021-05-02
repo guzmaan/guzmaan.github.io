@@ -20,31 +20,31 @@ function loadSample() {
 
     init();
 
-    let request = new XMLHttpRequest();
-    request.open("get", 'a_1.wav', true);
-    request.responseType = "arraybuffer";
+    let request1 = new XMLHttpRequest();
+    request1.open("get", 'a_1.wav', true);
+    request1.responseType = "arraybuffer";
 
-    request.onload = function () {
+    request1.onload = function () {
         audioContext.decodeAudioData(request.response, function (buffer1) {
             audioBuffer1 = buffer1;
             alert('sample1 is now loaded!');
         });
     };
 
-    request.send();
+    request1.send();
 
-		let request = new XMLHttpRequest();
-		request.open("get", 'o_1.wav', true);
-		request.responseType = "arraybuffer";
+		let request2 = new XMLHttpRequest();
+		request2.open("get", 'o_1.wav', true);
+		request2.responseType = "arraybuffer";
 
-		request.onload = function () {
+		request2.onload = function () {
 				audioContext.decodeAudioData(request.response, function (buffer2) {
 						audioBuffer2 = buffer2;
 						alert('sample2 is now loaded!');
 				});
 		};
 
-		request.send();
+		request2.send();
 }
 
 function playSample(audioBuffer1) {
