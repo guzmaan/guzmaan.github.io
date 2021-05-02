@@ -25,7 +25,7 @@ function loadSample() {
     request1.responseType = "arraybuffer";
 
     request1.onload = function () {
-        audioContext.decodeAudioData(request.response, function (buffer1) {
+        audioContext.decodeAudioData(request1.response, function (buffer1) {
             audioBuffer1 = buffer1;
             alert('sample1 is now loaded!');
         });
@@ -38,7 +38,7 @@ function loadSample() {
 		request2.responseType = "arraybuffer";
 
 		request2.onload = function () {
-				audioContext.decodeAudioData(request.response, function (buffer2) {
+				audioContext.decodeAudioData(request2.response, function (buffer2) {
 						audioBuffer2 = buffer2;
 						alert('sample2 is now loaded!');
 				});
