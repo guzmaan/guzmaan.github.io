@@ -1,44 +1,22 @@
 
-let loaded = false;
-let audioContext = null;
+//attach a click listener to a play button
+document.querySelector('button')?.addEventListener('click', async () => {
+	await Tone.start()
+	console.log('audio is ready')
+})
 
-function init() {
 
-    // Only initialise if it is the first time
-    if (!loaded) {
-        audioContext = new AudioContext();
-        loaded = true;
-    }
-}
-
-//////////////////////////////////////  Play Sample /////////////////////////////////////////
-
-let audioBuffer;
-
-function loadSample() {
-
-    init();
-
-    let request = new XMLHttpRequest();
-    request.open("get", 'a_1.wav', true);
-    request.open("get", 'a_2.wav', true);
-    request.open("get", 'a_3.wav', true);
-
-    request.responseType = "arraybuffer";
-
-    request.onload = function () {
-        audioContext.decodeAudioData(request.response, function (buffer) {
-            audioBuffer = buffer;
-            alert('sample is now loaded!');
-        });
-    };
-
-    request.send();
-}
-
-const player = new Tone.Player('a_1.wav').toDestination();
-// play as soon as the buffer is loaded
-player.autostart = true;
+const sampler = new Tone.Sampler({
+	urls: {
+		A1: "a_1.wav",
+		A2: "a_2.wav",
+    A3: "a_3.wav",
+	},
+	baseUrl: "https://guzmaan.github.io/audios",
+	onload: () => {
+		sampler.triggerAttackRelease(["A1", "A2", "A3"]);
+	}
+}).toDestination();
 
 
 
