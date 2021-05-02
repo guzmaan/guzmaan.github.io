@@ -24,8 +24,8 @@ function loadSample() {
     request.responseType = "arraybuffer";
 
     request.onload = function () {
-        audioContext.decodeAudioData(request.response, function (buffer) {
-            audioBuffer = buffer;
+        audioContext.decodeAudioData(request.response, function (buffer1) {
+            audioBuffer1 = buffer1;
             alert('sample is now loaded!');
         });
     };
@@ -37,12 +37,12 @@ function playSample() {
 
     init();
 
-    if (!audioBuffer) {
+    if (!audioBuffer1) {
         alert('there is no audio buffer!');
     }
 
     let sound = audioContext.createBufferSource();
-    sound.buffer = audioBuffer;
+    sound.buffer = audioBuffer1;
     sound.connect(audioContext.destination);
     sound.start(audioContext.currentTime);
 }
