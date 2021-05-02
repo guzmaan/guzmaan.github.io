@@ -13,7 +13,7 @@ function init() {
 
 //////////////////////////////////////  Play Sample /////////////////////////////////////////
 
-let audioBuffer;
+let audioBuffer1;
 
 function loadSample() {
 
