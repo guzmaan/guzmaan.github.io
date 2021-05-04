@@ -82,13 +82,13 @@ function playSample(audioBuffer2) {
 
 
 document.addEventListener('keydown', function (event) {
-  if (event.key === 'd') {
+  if (event.key === 'q') {
     loadSample();
   }
-  if (event.key === 'l') {
+  if (event.key === '1') {
     playSample(audioBuffer1);
   }
-	if (event.key === 'g') {
+	if (event.key === '2') {
     playSample(audioBuffer2);
   }
 });
