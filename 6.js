@@ -15,6 +15,8 @@ function init() {
 
 let audioBuffer1;
 let audioBuffer2;
+let audioBuffer3;
+let audioBuffer4;
 
 function loadSample() {
 
@@ -45,6 +47,33 @@ function loadSample() {
 		};
 
 		request2.send();
+
+let request3 = new XMLHttpRequest();
+request3.open("get", 'e_1.wav', true);
+request3.responseType = "arraybuffer";
+
+request3.onload = function () {
+    audioContext.decodeAudioData(request3.response, function (buffer3) {
+        audioBuffer3 = buffer3;
+        alert('sample1 is now loaded!');
+    });
+};
+
+request3.send();
+
+let request4 = new XMLHttpRequest();
+request4.open("get", 'e_2.wav', true);
+request4.responseType = "arraybuffer";
+
+request4.onload = function () {
+    audioContext.decodeAudioData(request4.response, function (buffer4) {
+        audioBuffer4 = buffer4;
+        alert('sample1 is now loaded!');
+    });
+};
+
+request4.send();
+
 }
 
 function playSample() {
@@ -59,13 +88,29 @@ function playSample() {
         alert('there is no audio buffer2!');
     }
 
-    const sources = [audioBuffer1, audioBuffer2];
-    const random = Math.floor(Math.random() * sources.length);
-    let sound = audioContext.createBufferSource();
+    if (!audioBuffer3) {
+        alert('there is no audio buffer1!');
+    }
 
-    sound.buffer = sources[random];
-    sound.connect(audioContext.destination);
-    sound.start(audioContext.currentTime);
+    if (!audioBuffer4) {
+        alert('there is no audio buffer2!');
+    }
+
+    const sourcesa = [audioBuffer1, audioBuffer2];
+    const randoma = Math.floor(Math.random() * sourcesa.length);
+    let sounda = audioContext.createBufferSource();
+
+    sounda.buffer = sourcesa[randoma];
+    sounda.connect(audioContext.destination);
+    sounda.start(audioContext.currentTime);
+
+    const sourcese = [audioBuffer3, audioBuffer4];
+    const randome = Math.floor(Math.random() * sourcese.length);
+    let sounde = audioContext.createBufferSource();
+
+    sounde.buffer = sourcese[randome];
+    sounde.connect(audioContext.destination);
+    sounde.start(audioContext.currentTime);
 }
 
 
@@ -74,7 +119,9 @@ document.addEventListener('keydown', function (event) {
     loadSample();
   }
   if (event.key === '1') {
-    playSample(audioBuffer1);
+    playSample(sounda);
   }
-
+  if (event.key === '2') {
+    playSample(sound3);
+  }
 });
