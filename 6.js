@@ -122,6 +122,6 @@ document.addEventListener('keydown', function (event) {
     playSample(sounda);
   }
   if (event.key === '2') {
-    playSample(sound3);
+    playSample(sounde);
   }
 });
