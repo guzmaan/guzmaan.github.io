@@ -34,7 +34,7 @@ function loadSample() {
     request1.send();
 
 		let request2 = new XMLHttpRequest();
-		request2.open("get", 'o_1.wav', true);
+		request2.open("get", 'a_2.wav', true);
 		request2.responseType = "arraybuffer";
 
 		request2.onload = function () {
@@ -47,7 +47,7 @@ function loadSample() {
 		request2.send();
 }
 
-function playSample(audioBuffer1) {
+function playSample() {
 
     init();
 
@@ -55,30 +55,18 @@ function playSample(audioBuffer1) {
         alert('there is no audio buffer1!');
     }
 
-    let sound1 = audioContext.createBufferSource();
-    sound1.buffer = audioBuffer1;
-    sound1.connect(audioContext.destination);
-    sound1.start(audioContext.currentTime);
-
-
-}
-
-function playSample(audioBuffer2) {
-
-    init();
-
     if (!audioBuffer2) {
         alert('there is no audio buffer2!');
     }
 
-    let sound2 = audioContext.createBufferSource();
-    sound2.buffer = audioBuffer2;
-    sound2.connect(audioContext.destination);
-    sound2.start(audioContext.currentTime);
+    const sources = [audioBuffer1, audioBuffer2];
+    const random = Math.floor(Math.random() * sources.length);
+    let sound = audioContext.createBufferSource();
 
-
+    sound.buffer = sources[random];
+    sound.connect(audioContext.destination);
+    sound.start(audioContext.currentTime);
 }
-
 
 
 document.addEventListener('keydown', function (event) {
@@ -88,7 +76,5 @@ document.addEventListener('keydown', function (event) {
   if (event.key === '1') {
     playSample(audioBuffer1);
   }
-	if (event.key === '2') {
-    playSample(audioBuffer2);
-  }
+
 });
