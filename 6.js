@@ -76,7 +76,7 @@ request4.send();
 
 }
 
-function playSample() {
+function playSample(group) {
 
     init();
 
@@ -89,12 +89,14 @@ function playSample() {
     }
 
     if (!audioBuffer3) {
-        alert('there is no audio buffer1!');
+        alert('there is no audio buffer3!');
     }
 
     if (!audioBuffer4) {
-        alert('there is no audio buffer2!');
+        alert('there is no audio buffer4!');
     }
+
+    if(group == 'groupa') {
 
     const sourcesa = [audioBuffer1, audioBuffer2];
     const randoma = Math.floor(Math.random() * sourcesa.length);
@@ -104,6 +106,8 @@ function playSample() {
     sounda.connect(audioContext.destination);
     sounda.start(audioContext.currentTime);
 
+    } else if(group == 'groupb') {
+
     const sourcese = [audioBuffer3, audioBuffer4];
     const randome = Math.floor(Math.random() * sourcese.length);
     let sounde = audioContext.createBufferSource();
@@ -111,8 +115,9 @@ function playSample() {
     sounde.buffer = sourcese[randome];
     sounde.connect(audioContext.destination);
     sounde.start(audioContext.currentTime);
-}
 
+    }
+}
 
 document.addEventListener('keydown', function (event) {
   if (event.key === 'q') {
