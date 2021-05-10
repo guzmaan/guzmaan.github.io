@@ -17,7 +17,8 @@ let audioBuffer1;
 let audioBuffer2;
 let audioBuffer3;
 let audioBuffer4;
-
+let groupa
+let groupb
 
 function loadSample() {
 
