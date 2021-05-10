@@ -125,10 +125,10 @@ document.addEventListener('keydown', function (event) {
   if (event.key === 'q') {
     loadSample();
   }
-  if (event.key === '1') {
+  if (event.key === 'a') {
     playSample(sounda);
   }
-  if (event.key === '2') {
+  if (event.key === 'e') {
     playSample(sounde);
   }
 });
