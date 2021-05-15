@@ -128,10 +128,10 @@ document.addEventListener('keydown', function (event) {
   if (event.key === 'q') {
     loadSample();
   }
-  if (event.key === '1') {
+  if (event.key === 'a') {
     playSample(groupa);
   }
-  if (event.key === '2') {
+  if (event.key === 's') {
     playSample(groupb);
   }
 });
