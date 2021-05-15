@@ -17,6 +17,8 @@ let audioBuffer1;
 let audioBuffer2;
 let audioBuffer3;
 let audioBuffer4;
+let groupa;
+let groupb;
 
 
 function loadSample() {
@@ -79,9 +81,8 @@ request4.send();
 
 function playSample(group) {
 
-  let groupa
-  let groupb
-  
+
+
     init();
 
     if (!audioBuffer1) {
