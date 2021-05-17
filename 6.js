@@ -17,8 +17,7 @@ let audioBuffer1;
 let audioBuffer2;
 let audioBuffer3;
 let audioBuffer4;
-let groupa;
-let groupb;
+
 
 
 function loadSample() {
@@ -129,9 +128,9 @@ document.addEventListener('keydown', function (event) {
     loadSample();
   }
   if (event.key === 'a') {
-    playSample(groupa);
+    playSample('groupa');
   }
   if (event.key === 's') {
-    playSample(groupb);
+    playSample('groupb');
   }
 });
