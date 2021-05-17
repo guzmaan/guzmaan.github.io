@@ -127,10 +127,10 @@ document.addEventListener('keydown', function (event) {
   if (event.key === 'q') {
     loadSample();
   }
-  if (event.key === 'a') {
+  if (event.key === '1') {
     playSample('groupa');
   }
-  if (event.key === 's') {
+  if (event.key === '2') {
     playSample('groupb');
   }
 });
