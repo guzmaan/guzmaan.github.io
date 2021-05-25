@@ -221,7 +221,7 @@ request13.onload = function () {
     });
 };
 
-request14.send();
+request13.send();
 
 let request14 = new XMLHttpRequest();
 request14.open("get", 'u_2.wav', true);
