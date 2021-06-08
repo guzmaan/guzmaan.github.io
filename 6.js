@@ -254,6 +254,19 @@ request15.send();
 
 
 
+
+
+
+// Create a compressor node
+var compressor = audioContext.createDynamicsCompressor();
+compressor.threshold.setValueAtTime(-50, audioContext.currentTime);
+compressor.knee.setValueAtTime(40, audioContext.currentTime);
+compressor.ratio.setValueAtTime(12, audioContext.currentTime);
+compressor.attack.setValueAtTime(0, audioContext.currentTime);
+compressor.release.setValueAtTime(0.25, audioContext.currentTime);
+
+
+
 function playSample(group) {
 
 
@@ -330,7 +343,7 @@ function playSample(group) {
     let soundi = audioContext.createBufferSource();
 
     soundi.buffer = sourcesi[randomi];
-    soundi.connect(audioContext.destination);
+    soundi.connect(compressor);
     soundi.start(audioContext.currentTime);
 
 
@@ -342,7 +355,7 @@ function playSample(group) {
     let sounde = audioContext.createBufferSource();
 
     sounde.buffer = sourcese[randome];
-    sounde.connect(audioContext.destination);
+    sounde.connect(compressor);
     sounde.start(audioContext.currentTime);
 
   } else if(group == 'groupa') {
@@ -352,7 +365,7 @@ function playSample(group) {
       let sounda = audioContext.createBufferSource();
 
       sounda.buffer = sourcesa[randoma];
-      sounda.connect(audioContext.destination);
+      sounda.connect(compressor);
       sounda.start(audioContext.currentTime);
 
     }else if(group == 'groupo') {
@@ -362,7 +375,7 @@ function playSample(group) {
         let soundo = audioContext.createBufferSource();
 
         soundo.buffer = sourceso[randomo];
-        soundo.connect(audioContext.destination);
+        soundo.connect(compressor);
         soundo.start(audioContext.currentTime);
 
       }else if(group == 'groupu') {
@@ -372,11 +385,18 @@ function playSample(group) {
           let soundu = audioContext.createBufferSource();
 
           soundu.buffer = sourcesu[randomu];
-          soundu.connect(audioContext.destination);
+          soundu.connect(compressor);
           soundu.start(audioContext.currentTime);
 
           }
 }
+
+
+// connect the AudioBufferSourceNode to the destination
+
+compressor.connect(audioContext.destination);
+
+
 
 document.addEventListener('keydown', function (event) {
   if (event.key === 'q') {
