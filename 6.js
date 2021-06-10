@@ -28,7 +28,7 @@ let audioBuffer12;
 let audioBuffer13;
 let audioBuffer14;
 let audioBuffer15;
-
+var compressor = audioContext.createDynamicsCompressor();
 
 
 
@@ -258,7 +258,7 @@ request15.send();
 
 
 // Create a compressor node
-var compressor = audioContext.createDynamicsCompressor();
+
 compressor.threshold.setValueAtTime(-50, audioContext.currentTime);
 compressor.knee.setValueAtTime(40, audioContext.currentTime);
 compressor.ratio.setValueAtTime(12, audioContext.currentTime);
