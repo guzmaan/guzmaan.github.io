@@ -1,4 +1,3 @@
-
 const audioContext = new AudioContext();
 
 //////////////////////////////////////  Play Sample /////////////////////////////////////////
@@ -18,13 +17,13 @@ let audioBuffer12;
 let audioBuffer13;
 let audioBuffer14;
 let audioBuffer15;
-var compressor = audioContext.createDynamicsCompressor();
+var compressor = audioContext.create();
 
 
 
 function loadSample() {
 
-    init();
+
 
     let request1 = new XMLHttpRequest();
     request1.open("get", 'i_1.wav', true);
@@ -261,7 +260,7 @@ function playSample(group) {
 
 
 
-    init();
+
 
     if (!audioBuffer1) {
         alert('there is no audio buffer1!');
