@@ -17,7 +17,7 @@ let audioBuffer12;
 let audioBuffer13;
 let audioBuffer14;
 let audioBuffer15;
-var compressor = audioContext.create();
+var compressor = audioContext.createDynamicsCompressor();
 
 
 
