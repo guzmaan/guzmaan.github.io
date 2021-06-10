@@ -1,15 +1,5 @@
 
-let loaded = false;
-let audioContext = null;
-
-function init() {
-
-    // Only initialise if it is the first time
-    if (!loaded) {
-        audioContext = new AudioContext();
-        loaded = true;
-    }
-}
+const audioContext = new AudioContext();
 
 //////////////////////////////////////  Play Sample /////////////////////////////////////////
 
