@@ -64,14 +64,8 @@ request3.onload = function () {
 
 request3.send();
 
-
-
-
-
-
-
 let request4 = new XMLHttpRequest();
-request4.open("get", 'e_1.wav', true);
+request4.open("get", 'i_4.wav', true);
 request4.responseType = "arraybuffer";
 
 request4.onload = function () {
@@ -80,13 +74,10 @@ request4.onload = function () {
     });
 };
 
-request4.send();
-
-
-
+request5.send();
 
 let request5 = new XMLHttpRequest();
-request5.open("get", 'e_2.wav', true);
+request5.open("get", 'i_5.wav', true);
 request5.responseType = "arraybuffer";
 
 request5.onload = function () {
@@ -99,8 +90,12 @@ request5.send();
 
 
 
+
+
+
+
 let request6 = new XMLHttpRequest();
-request6.open("get", 'e_3.wav', true);
+request6.open("get", 'e_1.wav', true);
 request6.responseType = "arraybuffer";
 
 request6.onload = function () {
@@ -113,9 +108,8 @@ request6.send();
 
 
 
-
 let request7 = new XMLHttpRequest();
-request7.open("get", 'a_1.wav', true);
+request7.open("get", 'e_2.wav', true);
 request7.responseType = "arraybuffer";
 
 request7.onload = function () {
@@ -129,7 +123,7 @@ request7.send();
 
 
 let request8 = new XMLHttpRequest();
-request8.open("get", 'a_2.wav', true);
+request8.open("get", 'e_3.wav', true);
 request8.responseType = "arraybuffer";
 
 request8.onload = function () {
@@ -141,11 +135,8 @@ request8.onload = function () {
 request8.send();
 
 
-
-
-
 let request9 = new XMLHttpRequest();
-request9.open("get", 'a_3.wav', true);
+request9.open("get", 'e_4.wav', true);
 request9.responseType = "arraybuffer";
 
 request9.onload = function () {
@@ -156,11 +147,8 @@ request9.onload = function () {
 
 request9.send();
 
-
-
-
 let request10 = new XMLHttpRequest();
-request10.open("get", 'o_1.wav', true);
+request10.open("get", 'e_5.wav', true);
 request10.responseType = "arraybuffer";
 
 request10.onload = function () {
@@ -172,8 +160,13 @@ request10.onload = function () {
 request10.send();
 
 
+
+
+
+
+
 let request11 = new XMLHttpRequest();
-request11.open("get", 'o_2.wav', true);
+request11.open("get", 'a_1.wav', true);
 request11.responseType = "arraybuffer";
 
 request11.onload = function () {
@@ -185,8 +178,9 @@ request11.onload = function () {
 request11.send();
 
 
+
 let request12 = new XMLHttpRequest();
-request12.open("get", 'o_3.wav', true);
+request12.open("get", 'a_2.wav', true);
 request12.responseType = "arraybuffer";
 
 request12.onload = function () {
@@ -200,8 +194,9 @@ request12.send();
 
 
 
+
 let request13 = new XMLHttpRequest();
-request13.open("get", 'u_1.wav', true);
+request13.open("get", 'a_3.wav', true);
 request13.responseType = "arraybuffer";
 
 request13.onload = function () {
@@ -213,7 +208,7 @@ request13.onload = function () {
 request13.send();
 
 let request14 = new XMLHttpRequest();
-request14.open("get", 'u_2.wav', true);
+request14.open("get", 'a_4.wav', true);
 request14.responseType = "arraybuffer";
 
 request14.onload = function () {
@@ -224,19 +219,152 @@ request14.onload = function () {
 
 request14.send();
 
-
 let request15 = new XMLHttpRequest();
-request15.open("get", 'u_3.wav', true);
+request15.open("get", 'a_5.wav', true);
 request15.responseType = "arraybuffer";
 
 request15.onload = function () {
     audioContext.decodeAudioData(request15.response, function (buffer15) {
         audioBuffer15 = buffer15;
-        alert('samples are now loaded!');
     });
 };
 
 request15.send();
+
+
+
+
+
+let request16 = new XMLHttpRequest();
+request16.open("get", 'o_1.wav', true);
+request16.responseType = "arraybuffer";
+
+request16.onload = function () {
+    audioContext.decodeAudioData(request16.response, function (buffer16) {
+        audioBuffer16 = buffer16;
+    });
+};
+
+request16.send();
+
+
+let request17 = new XMLHttpRequest();
+request17.open("get", 'o_2.wav', true);
+request17.responseType = "arraybuffer";
+
+request17.onload = function () {
+    audioContext.decodeAudioData(request17.response, function (buffer17) {
+        audioBuffer17 = buffer17;
+    });
+};
+
+request17.send();
+
+
+let request18 = new XMLHttpRequest();
+request18.open("get", 'o_3.wav', true);
+request18.responseType = "arraybuffer";
+
+request18.onload = function () {
+    audioContext.decodeAudioData(request18.response, function (buffer18) {
+        audioBuffer18 = buffer18;
+    });
+};
+
+request18.send();
+
+let request19 = new XMLHttpRequest();
+request19.open("get", 'o_4.wav', true);
+request19.responseType = "arraybuffer";
+
+request19.onload = function () {
+    audioContext.decodeAudioData(request19.response, function (buffer19) {
+        audioBuffer19 = buffer19;
+    });
+};
+
+request19.send();
+
+let request20 = new XMLHttpRequest();
+request20.open("get", 'o_5.wav', true);
+request20.responseType = "arraybuffer";
+
+request20.onload = function () {
+    audioContext.decodeAudioData(request18.response, function (buffer20) {
+        audioBuffer20 = buffer20;
+    });
+};
+
+request20.send();
+
+
+
+
+
+
+
+let request21 = new XMLHttpRequest();
+request21.open("get", 'u_1.wav', true);
+request21.responseType = "arraybuffer";
+
+request21.onload = function () {
+    audioContext.decodeAudioData(request21.response, function (buffer21) {
+        audioBuffer21 = buffer21;
+    });
+};
+
+request21.send();
+
+let request22 = new XMLHttpRequest();
+request22.open("get", 'u_2.wav', true);
+request22.responseType = "arraybuffer";
+
+request22.onload = function () {
+    audioContext.decodeAudioData(request22.response, function (buffer22) {
+        audioBuffer22 = buffer22;
+    });
+};
+
+request22.send();
+
+
+let request23 = new XMLHttpRequest();
+request23.open("get", 'u_3.wav', true);
+request23.responseType = "arraybuffer";
+
+request23.onload = function () {
+    audioContext.decodeAudioData(request23.response, function (buffer23) {
+        audioBuffer23 = buffer23;
+    });
+};
+
+request23.send();
+
+
+let request24 = new XMLHttpRequest();
+request24.open("get", 'u_4.wav', true);
+request24.responseType = "arraybuffer";
+
+request24.onload = function () {
+    audioContext.decodeAudioData(request24.response, function (buffer24) {
+        audioBuffer24 = buffer24;
+    });
+};
+
+request24.send();
+
+let request25 = new XMLHttpRequest();
+request25.open("get", 'u_5.wav', true);
+request25.responseType = "arraybuffer";
+
+request25.onload = function () {
+    audioContext.decodeAudioData(request25.response, function (buffer25) {
+        audioBuffer25 = buffer25;
+        alert('samples are now loaded!');
+    });
+};
+
+request25.send();
 
 
 }
@@ -322,12 +450,56 @@ function playSample(group) {
         alert('there is no audio buffer15!');
     }
 
+    if (!audioBuffer15) {
+        alert('there is no audio buffer15!');
+    }
+
+    if (!audioBuffer16) {
+        alert('there is no audio buffer15!');
+    }
+
+    if (!audioBuffer17) {
+        alert('there is no audio buffer15!');
+    }
+
+    if (!audioBuffer18) {
+        alert('there is no audio buffer15!');
+    }
+
+    if (!audioBuffer19) {
+        alert('there is no audio buffer15!');
+    }
+
+    if (!audioBuffer20) {
+        alert('there is no audio buffer15!');
+    }
+
+    if (!audioBuffer21) {
+        alert('there is no audio buffer15!');
+    }
+
+    if (!audioBuffer22) {
+        alert('there is no audio buffer15!');
+    }
+
+    if (!audioBuffer23) {
+        alert('there is no audio buffer15!');
+    }
+
+    if (!audioBuffer24) {
+        alert('there is no audio buffer15!');
+    }
+
+    if (!audioBuffer25) {
+        alert('there is no audio buffer15!');
+    }
+
 
 
 
     if(group == 'groupi') {
 
-    const sourcesi = [audioBuffer1, audioBuffer2, audioBuffer3];
+    const sourcesi = [audioBuffer1, audioBuffer2, audioBuffer3, audioBuffer5, audioBuffer5];
     const randomi = Math.floor(Math.random() * sourcesi.length);
     let soundi = audioContext.createBufferSource();
 
@@ -339,7 +511,7 @@ function playSample(group) {
 
   } else if(group == 'groupe') {
 
-    const sourcese = [audioBuffer4, audioBuffer5, audioBuffer6];
+    const sourcese = [audioBuffer6, audioBuffer7, audioBuffer8, audioBuffer9, audioBuffer10];
     const randome = Math.floor(Math.random() * sourcese.length);
     let sounde = audioContext.createBufferSource();
 
@@ -349,7 +521,7 @@ function playSample(group) {
 
   } else if(group == 'groupa') {
 
-      const sourcesa = [audioBuffer7, audioBuffer8, audioBuffer9];
+      const sourcesa = [audioBuffer11, audioBuffer12, audioBuffer13, audioBuffer14, audioBuffer15];
       const randoma = Math.floor(Math.random() * sourcesa.length);
       let sounda = audioContext.createBufferSource();
 
@@ -359,7 +531,7 @@ function playSample(group) {
 
     }else if(group == 'groupo') {
 
-        const sourceso = [audioBuffer10, audioBuffer11, audioBuffer12];
+        const sourceso = [audioBuffer16, audioBuffer17, audioBuffer18, audioBuffer19, audioBuffer20];
         const randomo = Math.floor(Math.random() * sourceso.length);
         let soundo = audioContext.createBufferSource();
 
@@ -369,7 +541,7 @@ function playSample(group) {
 
       }else if(group == 'groupu') {
 
-          const sourcesu = [audioBuffer13, audioBuffer14, audioBuffer15];
+          const sourcesu = [audioBuffer21, audioBuffer22, audioBuffer23, audioBuffer24, audioBuffer25];
           const randomu = Math.floor(Math.random() * sourcesu.length);
           let soundu = audioContext.createBufferSource();
 
