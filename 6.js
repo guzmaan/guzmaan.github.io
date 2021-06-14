@@ -290,7 +290,7 @@ request20.open("get", 'o_5.wav', true);
 request20.responseType = "arraybuffer";
 
 request20.onload = function () {
-    audioContext.decodeAudioData(request18.response, function (buffer20) {
+    audioContext.decodeAudioData(request20.response, function (buffer20) {
         audioBuffer20 = buffer20;
     });
 };
