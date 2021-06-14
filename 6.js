@@ -74,7 +74,7 @@ request4.onload = function () {
     });
 };
 
-request5.send();
+request4.send();
 
 let request5 = new XMLHttpRequest();
 request5.open("get", 'i_5.wav', true);
